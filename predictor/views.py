@@ -218,9 +218,9 @@ def breast(request):
             params={
                 "n_estimators": 17,
                 "criterion": "entropy",
-                "max_depth": 10
+                "max_depth": 7
             },
-            run_name="RF_depth_10"
+            run_name="RF_depth_7"
         )
 
         prediction = rf.predict(user_data)
