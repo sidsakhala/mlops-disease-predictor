@@ -22,6 +22,6 @@ EXPOSE 8001 5001
 # Run server
 # Start MLflow UI and Django server
 CMD bash -c "\
-mlflow ui --backend-store-uri --port 5001 file:/app/mlruns --host 0.0.0.0 & \
+mlflow ui --host 0.0.0.0 --port 5001 --backend-store-uri /app/mlruns & \
 python manage.py runserver 0.0.0.0:8001 \
 "
