@@ -4,7 +4,7 @@
 set -e
 
 echo "Applying Kubernetes Deployment..."
-kubectl apply -f deployment.yaml
+kubectl apply -f k8s-deployment.yaml
 
 echo "Applying Kubernetes Service..."
 kubectl apply -f k8s-service.yml
