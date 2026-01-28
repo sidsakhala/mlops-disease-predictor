@@ -6,14 +6,14 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mlops_disease_predictor
+      app: mlops-disease-predictor
   template:
     metadata:
       labels:
-        app: mlops_disease_predictor
+        app: mlops-disease-predictor
     spec:
       containers:
-      - name: mlops_disease_predictor
+      - name: mlops-disease-predictor
         image: sudhsakhala/mlops-disease-predictor:latest
         ports:
         - containerPort: 8001
