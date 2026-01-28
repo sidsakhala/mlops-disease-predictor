@@ -5,7 +5,7 @@ metadata:
 spec:
   type: NodePort
   selector:
-    app: mlops_disease_predictor
+    app: mlops-disease-predictor
   ports:
     - name: django
       port: 8001
