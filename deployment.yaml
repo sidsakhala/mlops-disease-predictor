@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: django-mlflow-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mlops_disease_predictor
+  template:
+    metadata:
+      labels:
+        app: mlops_disease_predictor
+    spec:
+      containers:
+      - name: mlops_disease_predictor
+        image: sudhsakhala/mlops-disease-predictor:latest
+        ports:
+        - containerPort: 8001
+        - containerPort: 5001
+        env:
+        - name: PYTHONDONTWRITEBYTECODE
+          value: "1"
+        - name: PYTHONUNBUFFERED
+          value: "1"

@@ -22,8 +22,8 @@ from sklearn.metrics import (
 # MLflow basic configuration
 # --------------------------------------------------
 
-# MLFLOW_TRACKING_URI = "mlruns"
-MLFLOW_TRACKING_URI = "file:/app/mlruns"
+MLFLOW_TRACKING_URI = "mlruns"
+# MLFLOW_TRACKING_URI = "file:/app/mlruns"
 
 mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
 
@@ -220,9 +220,9 @@ def breast(request):
             params={
                 "n_estimators": 17,
                 "criterion": "entropy",
-                "max_depth": 5
+                "max_depth": 9
             },
-            run_name="RF_depth_5"
+            run_name="RF_depth_9"
         )
 
         prediction = rf.predict(user_data)

@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: django-mlflow-service
+spec:
+  type: NodePort
+  selector:
+    app: mlops_disease_predictor
+  ports:
+    - name: django
+      port: 8001
+      targetPort: 8001
+      nodePort: 30001
+    - name: mlflow
+      port: 5001
+      targetPort: 5001
+      nodePort: 30002
