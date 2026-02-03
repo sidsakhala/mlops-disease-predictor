@@ -13,7 +13,7 @@ echo "Applying Kubernetes Deployment..."
 kubectl apply -f k8s-deployment.yaml
 
 echo "Applying Kubernetes Service..."
-kubectl apply -f k8s-service.yml
+kubectl apply -f k8s-service.yaml
 
 # echo "Scaling deployment to 3 replicas..."
 # kubectl scale deployment django-mlflow-deployment --replicas=3
