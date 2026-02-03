@@ -22,10 +22,16 @@ from sklearn.metrics import (
 # MLflow basic configuration
 # --------------------------------------------------
 
-MLFLOW_TRACKING_URI = "mlruns"
+# MLFLOW_TRACKING_URI = "mlruns"
 # MLFLOW_TRACKING_URI = "file:/app/mlruns"
 
+MLFLOW_TRACKING_URI = os.getenv(
+    "MLFLOW_TRACKING_URI",
+    "http://localhost:5001"
+)
+
 mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
+# mlflow.set_tracking_uri("http://localhost:5001")
 
 
 # --------------------------------------------------
